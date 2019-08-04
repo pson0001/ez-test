@@ -207,19 +207,7 @@ function App() {
           </ul>
         </div>
       </div>
-      {/* <div className="navbar">
-        <a href="#edu">Education</a>
-        <a href="#exp">Experience</a>
-        <a href="#skill">Skills</a>
-        <a href="#proj">Projects</a>
-        <a href="#cont">Contact</a>
-        <a href="#dwnl">
-          Download Resume
-          <span>
-            <img src={download} alt="Logo" width="14px" />
-          </span>
-        </a>
-      </div> */}
+
       <div className="Landing">
         <div className="Name">Faik Aydin</div>
         <div className="Discription">
@@ -512,6 +500,164 @@ function App() {
         <div className="Projects" id="projects">
           <div className="hard_header">
             <h2>Projects</h2>
+          </div>
+          <div className="edu_content">
+            <div className="content_row">
+              <div className="edu_time">
+                <h3 className="left" style={{ fontWeight: "700" }}>
+                  SMART WINGS
+                </h3>
+              </div>
+              <div className="edu border">
+                <div className="dot" />
+                <h3 className="right">Project Definition:</h3>
+
+                <h4 className="right">
+                  Wing design for long-range missiles which autonomously reduces
+                  drag force during travel
+                </h4>
+
+                <h3 className="right" style={{ marginTop: "20px" }}>
+                  Project Description:
+                </h3>
+
+                <h4 className="right">
+                  A mechatronics project that uses various sensors on a missile
+                  and makes realtime adjustments to the shape of the wing and
+                  the camber angle to reduce drag force for fuel efficiency and
+                  accuracy. The actuators are shape memory alloys which contract
+                  and release with heat, generated from the current which flows
+                  via PIC microcontrollers. These algorithms that are modeled
+                  are programmed into the PIC which controls the state of the
+                  current based on realtime data on the missile
+                </h4>
+                <h3 className="right" style={{ marginTop: "20px" }}>
+                  Contributions:
+                </h3>
+
+                <h4 className="right">
+                  Worked in the avionics department as a mechatronics engineer
+                  (research, part-time) at Roketsan. Mainly contributed to
+                  algorithm development and testing & integration of PIC logic
+                  into the experimental actuators
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div className="edu_content">
+            <div className="content_row">
+              <div className="edu_time">
+                <h3 className="left" style={{ fontWeight: "700" }}>
+                  Medical multimodaling with transfer learning
+                </h3>
+              </div>
+              <div className="edu border">
+                <div className="dot" />
+                <h3 className="right">Project Definition:</h3>
+
+                <h4 className="right">
+                  Creating a lung anomaly detector using limited data sources
+                  leveraging transfer learning
+                </h4>
+
+                <h3 className="right" style={{ marginTop: "20px" }}>
+                  Project Description:
+                </h3>
+
+                <h4 className="right">
+                  This master's thesis research was about leveraging transfer
+                  learning and seeing if we could make use of it at The Alfred
+                  Hospital (Melbourne, VIC). For this, we made use of imaging
+                  and NLP, using DenseNet trained on ChestX-ray14 and one 1-D
+                  CNN text submodel with a pre-trained GloVe embedding layer.
+                  Experimental results show that our multimodal improves the
+                  accuracy of the classification by 4% and 7% on average of 50
+                  epochs, compared to the individual text and image model,
+                  respectively.
+                </h4>
+                <h3 className="right" style={{ marginTop: "20px" }}>
+                  Contributions:
+                </h3>
+
+                <h4 className="right">
+                  For Short Paper (with co-authors from Nvidia and Monash) and
+                  sample notebooks:
+                </h4>
+                <h4 className="right">
+                  <a
+                    href="https://github.com/faikezra/medical-multimodal-with-transfer-learning"
+                    style={{ color: "black", textDecoration: "underline" }}
+                  >
+                    https://github.com/faikezra/medical-multimodal-with-transfer-learning
+                  </a>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div className="edu_content">
+            <div className="content_row">
+              <div className="edu_time">
+                <h3 className="left" style={{ fontWeight: "700" }}>
+                  GLORIA{" "}
+                </h3>
+              </div>
+              <div className="edu border">
+                <div className="dot" />
+                <h3 className="right">Project Definition:</h3>
+
+                <h4 className="right">
+                  An NLP Product that assists call agents.
+                </h4>
+
+                <h3 className="right" style={{ marginTop: "20px" }}>
+                  Project Description:
+                </h3>
+
+                <h4 className="right">
+                  The most established deep learning project inside of Telstra
+                  (Melbourne, Australia). It is ongoing research, and also is
+                  being used and tested by Telstra call agents. With the use of
+                  massive datasets from the chatlogs of millions of Telstra
+                  calls, it is not only a challenge to build and evaluate these
+                  models, but it also is a very intense data engineering and
+                  pipeline problem.
+                </h4>
+                <h3 className="right" style={{ marginTop: "20px" }}>
+                  Contributions:
+                </h3>
+
+                <h4 className="right">
+                  - Integrated BERT into the Tensorflow/Hadoop ecosystem of
+                  Agent Assist for entailment the entailment detection to create
+                  negative datasets
+                </h4>
+                <h4 className="right">
+                  - Working with the skip-thought LSTM model to embed agent
+                  responses
+                </h4>
+                <h4 className="right">
+                  - Experimenting with the performance of Multi-task learning
+                  agents
+                </h4>
+                <h4 className="right">
+                  - Detecting canned responses within a large embedding space
+                </h4>
+
+                <h3 className="right" style={{ marginTop: "20px" }}>
+                  To see my other relevant short work about BERT:
+                </h3>
+                <h4 className="right">
+                  <a
+                    href="https://github.com/faikezra/article-classification-with-transfer-learning"
+                    style={{ color: "black", textDecoration: "underline" }}
+                  >
+                    https://github.com/faikezra/article-classification-with-transfer-learning
+                  </a>
+                </h4>
+              </div>
+            </div>
           </div>
         </div>
 
