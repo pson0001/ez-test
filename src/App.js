@@ -15,26 +15,37 @@ function App() {
   const [deep, setDeep] = useState(false)
   const [data, setData] = useState(false)
   const [dev, setDev] = useState(false)
-  const [smart, setSmart] = useState(true)
-  const [medical, setMedical] = useState(false)
+  const [smart, setSmart] = useState(false)
+  const [agent, setAgent] = useState(false)
+
+  const [medical, setMedical] = useState(true)
   const [gloria, setGloria] = useState(false)
 
   const activeSmart = e => {
     setSmart(true)
     setMedical(false)
     setGloria(false)
+    setAgent(false)
+  }
+  const activeAgent = e => {
+    setAgent(true)
+    setMedical(false)
+    setGloria(false)
+    setSmart(false)
   }
 
   const activeMedical = e => {
     setSmart(false)
     setMedical(true)
     setGloria(false)
+    setAgent(false)
   }
 
   const activeGloria = e => {
     setSmart(false)
     setMedical(false)
     setGloria(true)
+    setAgent(false)
   }
   const activeScience = e => {
     setScience(true)
@@ -532,18 +543,18 @@ function App() {
             <div className="content_row">
               <div className="edu_time">
                 <h3
-                  className={smart ? "left" : "left notActive"}
-                  style={{ fontWeight: "700" }}
-                  onClick={activeSmart}
-                >
-                  SMART WINGS
-                </h3>
-                <h3
                   className={medical ? "left" : "left notActive"}
                   style={{ fontWeight: "700" }}
                   onClick={activeMedical}
                 >
                   Medical multimodaling with transfer learning
+                </h3>
+                <h3
+                  className={agent ? "left" : "left notActive"}
+                  style={{ fontWeight: "700" }}
+                  onClick={activeAgent}
+                >
+                  AGENT ASSIST
                 </h3>
                 <h3
                   className={gloria ? "left" : "left notActive"}
@@ -552,47 +563,20 @@ function App() {
                 >
                   GLORIA
                 </h3>
+                <h3
+                  className={smart ? "left" : "left notActive"}
+                  style={{ fontWeight: "700" }}
+                  onClick={activeSmart}
+                >
+                  SMART WINGS
+                </h3>
               </div>
               <div className="edu border">
                 <div className="dot" />
-                <div className={smart ? "show" : "hidden"}>
-                  <h3 className="right">Project Definition:</h3>
-
-                  <h4 className="right">
-                    Wing design for long-range missiles which autonomously
-                    reduces drag force during travel
-                  </h4>
-
-                  <h3 className="right" style={{ marginTop: "20px" }}>
-                    Project Description:
-                  </h3>
-
-                  <h4 className="right">
-                    A mechatronics project that uses various sensors on a
-                    missile and makes realtime adjustments to the shape of the
-                    wing and the camber angle to reduce drag force for fuel
-                    efficiency and accuracy. The actuators are shape memory
-                    alloys which contract and release with heat, generated from
-                    the current which flows via PIC microcontrollers. These
-                    algorithms that are modeled are programmed into the PIC
-                    which controls the state of the current based on realtime
-                    data on the missile
-                  </h4>
-                  <h3 className="right" style={{ marginTop: "20px" }}>
-                    Contributions:
-                  </h3>
-
-                  <h4 className="right">
-                    Worked in the avionics department as a mechatronics engineer
-                    (research, part-time) at Roketsan. Mainly contributed to
-                    algorithm development and testing & integration of PIC logic
-                    into the experimental actuators
-                  </h4>
-                </div>
 
                 <div
                   className={medical ? "show" : "hidden"}
-                  style={{ marginTop: "12px" }}
+                  style={{ marginTop: "6px" }}
                 >
                   <h3 className="right">Project Definition:</h3>
 
@@ -634,14 +618,13 @@ function App() {
                   </h4>
                 </div>
 
-                <div
-                  className={gloria ? "show" : "hidden"}
-                  style={{ marginTop: "12px" }}
-                >
-                  <h3 className="right">Project Definition:</h3>
+                <div className={agent ? "show" : "hidden"}>
+                  <h3 className="right" style={{ marginTop: "0px" }}>
+                    Project Definition:
+                  </h3>
 
                   <h4 className="right">
-                    An NLP Product that assists call agents.
+                    An NLP Product that assists call agents
                   </h4>
 
                   <h3 className="right" style={{ marginTop: "20px" }}>
@@ -655,32 +638,33 @@ function App() {
                     of massive datasets from the chatlogs of millions of Telstra
                     calls, it is not only a challenge to build and evaluate
                     these models, but it also is a very intense data engineering
-                    and pipeline problem.
+                    and pipeline problem
                   </h4>
                   <h3 className="right" style={{ marginTop: "20px" }}>
                     Contributions:
                   </h3>
 
                   <h4 className="right">
-                    - Integrated BERT into the Tensorflow/Hadoop ecosystem of
-                    Agent Assist for entailment the entailment detection to
-                    create negative datasets
+                    <li>
+                      Integrated BERT into the Tensorflow/Hadoop ecosystem of
+                      Agent Assist for entailment the entailment detection to
+                      create negative datasets
+                    </li>
+                    <li>
+                      Working with the skip-thought LSTM model to embed agent
+                      responses
+                    </li>
+                    <li>
+                      Experimenting with the performance of Multi-task learning
+                      agents
+                    </li>
+                    <li>
+                      Detecting canned responses within a large embedding space.
+                    </li>
                   </h4>
                   <h4 className="right">
-                    - Working with the skip-thought LSTM model to embed agent
-                    responses
-                  </h4>
-                  <h4 className="right">
-                    - Experimenting with the performance of Multi-task learning
-                    agents
-                  </h4>
-                  <h4 className="right">
-                    - Detecting canned responses within a large embedding space
-                  </h4>
-
-                  <h3 className="right" style={{ marginTop: "20px" }}>
                     To see my other relevant short work about BERT:
-                  </h3>
+                  </h4>
                   <h4 className="right">
                     <a
                       href="https://github.com/faikezra/article-classification-with-transfer-learning"
@@ -688,6 +672,74 @@ function App() {
                     >
                       https://github.com/faikezra/article-classification-with-transfer-learning
                     </a>
+                  </h4>
+                </div>
+
+                <div
+                  className={gloria ? "show" : "hidden"}
+                  style={{ marginTop: "12px" }}
+                >
+                  <h3 className="right">Project Definition:</h3>
+
+                  <h4 className="right">Geospatial analytics for retail use</h4>
+
+                  <h3 className="right" style={{ marginTop: "20px" }}>
+                    Project Description:
+                  </h3>
+
+                  <h4 className="right">
+                    Determining the optimal retail mix for large building
+                    precinct. GLORIA is an AI-powered tool for modeling a
+                    precinct’s commercial ecosystem, that uses supply and demand
+                    factors to recommend the highest and best uses for retail
+                    space
+                  </h4>
+                  <h3 className="right" style={{ marginTop: "20px" }}>
+                    Contributions:
+                  </h3>
+
+                  <h4 className="right">
+                    Developing various deep learning models to impute missing
+                    geospatial data in large datasets. Building an outlier
+                    detection algorithm to identify areas that lack a certain
+                    kind of retail store
+                  </h4>
+                </div>
+                <div
+                  className={smart ? "show" : "hidden"}
+                  style={{ marginTop: "12px" }}
+                >
+                  <h3 className="right">Project Definition:</h3>
+
+                  <h4 className="right">
+                    Wing design for long-range missiles which autonomously
+                    reduces drag force during travel
+                  </h4>
+
+                  <h3 className="right" style={{ marginTop: "20px" }}>
+                    Project Description:
+                  </h3>
+
+                  <h4 className="right">
+                    A mechatronics project that uses various sensors on a
+                    missile and makes realtime adjustments to the shape of the
+                    wing and the camber angle to reduce drag force for fuel
+                    efficiency and accuracy. The actuators are shape memory
+                    alloys which contract and release with heat, generated from
+                    the current which flows via PIC microcontrollers. These
+                    algorithms that are modeled are programmed into the PIC
+                    which controls the state of the current based on realtime
+                    data on the missile
+                  </h4>
+                  <h3 className="right" style={{ marginTop: "20px" }}>
+                    Contributions:
+                  </h3>
+
+                  <h4 className="right">
+                    Worked in the avionics department as a mechatronics engineer
+                    (research, part-time) at Roketsan. Mainly contributed to
+                    algorithm development and testing & integration of PIC logic
+                    into the experimental actuators
                   </h4>
                 </div>
               </div>
