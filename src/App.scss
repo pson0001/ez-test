@@ -267,13 +267,7 @@ a {
       font-weight: 500;
     }
   }
-  @media screen and (max-width: 600px) {
-    .grid_header {
-      grid-template-areas:
-        "science_header deep_header"
-        "data_header dev_header";
-    }
-  }
+
   .grid_header {
     width: 50%;
     margin: 0 auto;
@@ -510,4 +504,33 @@ h4.contact_detail {
   width: 60%;
   justify-content: left;
   margin-left: 20px;
+}
+
+@media (max-width: 700px) {
+  .Skills {
+    height: 120vh;
+
+    .grid_header {
+      grid-template-areas:
+        "science_header deep_header"
+        "data_header    dev_header";
+    }
+    .grid_table {
+      grid-template-areas:
+        "deep sql"
+        "html geo"
+        "git python"
+        " keras net"
+        "r tensor "
+        "hadoop liner"
+        "recurrent js "
+        "baysian scala"
+        "forcast rein"
+        " css transformer"
+        "node time"
+        " arch react"
+        "nlp spark "
+        "tableau image";
+    }
+  }
 }
