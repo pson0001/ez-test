@@ -232,7 +232,7 @@ function App() {
       <div className="Landing">
         <div className="Name">Faik Aydin</div>
         <div className="Discription">
-          <p className="langing_desc">
+          <p className="landing_desc">
             <span className="gradient">Data Scientist</span> & Machine Learning
             Engineer | Active Research in
             <span className="gradient">Deep Learning</span>
