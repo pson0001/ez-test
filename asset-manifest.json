@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ez-test/static/css/main.11339553.chunk.css",
+    "main.css": "/ez-test/static/css/main.f2bd11ee.chunk.css",
     "main.js": "/ez-test/static/js/main.d647e402.chunk.js",
     "main.js.map": "/ez-test/static/js/main.d647e402.chunk.js.map",
     "runtime~main.js": "/ez-test/static/js/runtime~main.de885366.js",
@@ -8,9 +8,9 @@
     "static/js/2.1c14bdce.chunk.js": "/ez-test/static/js/2.1c14bdce.chunk.js",
     "static/js/2.1c14bdce.chunk.js.map": "/ez-test/static/js/2.1c14bdce.chunk.js.map",
     "index.html": "/ez-test/index.html",
-    "precache-manifest.e515a7bcbbf5778f2cb1dccc7a20cddd.js": "/ez-test/precache-manifest.e515a7bcbbf5778f2cb1dccc7a20cddd.js",
+    "precache-manifest.e4d20cb9db31c5432c59fbca3340b584.js": "/ez-test/precache-manifest.e4d20cb9db31c5432c59fbca3340b584.js",
     "service-worker.js": "/ez-test/service-worker.js",
-    "static/css/main.11339553.chunk.css.map": "/ez-test/static/css/main.11339553.chunk.css.map",
+    "static/css/main.f2bd11ee.chunk.css.map": "/ez-test/static/css/main.f2bd11ee.chunk.css.map",
     "static/media/Arrow.svg": "/ez-test/static/media/Arrow.50d012b7.svg",
     "static/media/Download.svg": "/ez-test/static/media/Download.924e146d.svg",
     "static/media/Faik-Canberk-AYDIN.pdf": "/ez-test/static/media/Faik-Canberk-AYDIN.fd919af7.pdf",
