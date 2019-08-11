@@ -107,7 +107,7 @@ function App() {
         <ul className="navBar">
           <ul>
             <li>
-              <a href="#edication" style={{ margin: "0px", top: "0px" }}>
+              <a href="#education" style={{ margin: "0px", top: "0px" }}>
                 <span>Education</span>
               </a>
             </li>
@@ -160,7 +160,7 @@ function App() {
           <ul id="menu">
             <li>
               <a
-                href="#edication"
+                href="#education"
                 style={{ margin: "0px", top: "0px" }}
                 onClick={() => {
                   setCheckbox(!checkbox)
@@ -242,14 +242,16 @@ function App() {
           </p>
 
           <div className="button_div">
-            <button className="scroll_button">More about me</button>
+            <a style={{ marginRight: "0px", top: "0px" }} href="#education">
+              <button className="scroll_button">More about me </button>
+            </a>
           </div>
           <div className="arrow">
             <img src={arrow} alt="Scroll Down" />
           </div>
         </div>
       </div>
-      <div className="Education" id="edication">
+      <div className="Education" id="education">
         <div className="hard_header">
           <h2>Education</h2>
         </div>
@@ -705,7 +707,11 @@ function App() {
               </div>
               <div className="contact_right">
                 <h4 className="contact_detail">Email:</h4>
-                <h4 className="contact_detail">faikcanberkadyin@gmail.com</h4>
+                <h4 className="contact_detail">
+                  <span className="contact_detail">
+                    faikcanberkadyin@gmail.com
+                  </span>
+                </h4>
                 <div className="icons">
                   <a href="https://github.com/faikezra/">
                     <img src={github} alt="Github" height="30px" />
