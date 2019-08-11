@@ -4,46 +4,65 @@ import "./Navigation.scss"
 
 import download from "./assets/Download.svg"
 import arrow from "./assets/Arrow.svg"
-import medium from "./assets/medium.svg"
-import linkedin from "./assets/linkedin.svg"
-import github from "./assets/github.svg"
+
+import github from "./assets/github-white.svg"
+import resume from "./assets/Faik-Canberk-AYDIN.pdf"
 
 function App() {
   const [checkbox, setCheckbox] = useState(false)
   const [counter, setCounter] = useState(0)
-  const [science, setScience] = useState(true)
+  const [science, setScience] = useState(false)
   const [deep, setDeep] = useState(false)
   const [data, setData] = useState(false)
   const [dev, setDev] = useState(false)
+  const [smart, setSmart] = useState(true)
+  const [medical, setMedical] = useState(false)
+  const [gloria, setGloria] = useState(false)
 
+  const activeSmart = e => {
+    setSmart(true)
+    setMedical(false)
+    setGloria(false)
+  }
+
+  const activeMedical = e => {
+    setSmart(false)
+    setMedical(true)
+    setGloria(false)
+  }
+
+  const activeGloria = e => {
+    setSmart(false)
+    setMedical(false)
+    setGloria(true)
+  }
   const activeScience = e => {
     setScience(true)
     setDeep(false)
     setData(false)
     setDev(false)
-    setCounter(0)
+    setCounter(1)
   }
   const activeDeep = e => {
     setScience(false)
-
     setDeep(true)
     setData(false)
     setDev(false)
-    setCounter(1)
+    setCounter(2)
   }
   const activeData = e => {
     setScience(false)
     setDeep(false)
     setData(true)
     setDev(false)
-    setCounter(2)
+    setCounter(3)
   }
   const activeDev = e => {
     setScience(false)
     setDeep(false)
     setData(false)
     setDev(true)
-    setCounter(3)
+    setCounter(4)
   }
 
   const skillRef = useRef()
@@ -51,26 +70,28 @@ function App() {
   const handleScroll = e => {
     //console.log(skillRef.current.getBoundingClientRect().top)
     if (
-      skillRef.current.getBoundingClientRect().top < 50 &&
+      skillRef.current.getBoundingClientRect().top < 100 &&
       skillRef.current.getBoundingClientRect().top > 0
     ) {
       setCounter(counter + 1)
       //console.log(counter)
-      if (counter < 4) {
+      if (counter < 5) {
         document.body.style.overflowY = "hidden"
-        if (counter === 0) {
-        }
         if (counter === 1) {
+          setScience(true)
+          setDeep(false)
+        }
+        if (counter === 2) {
           setScience(false)
           setDeep(true)
         }
 
-        if (counter === 2) {
+        if (counter === 3) {
           setDeep(false)
           setData(true)
         }
 
-        if (counter === 3) {
+        if (counter === 4) {
           setData(false)
           setDev(true)
         }
@@ -113,7 +134,7 @@ function App() {
               </a>
             </li>
             <li>
-              <a href={github} download style={{ top: "0px" }}>
+              <a href={resume} download style={{ top: "0px" }}>
                 <span>
                   Download Resume
                   <span>
@@ -195,7 +216,7 @@ function App() {
               </a>
             </li>
             <li>
-              <a href={github} download style={{ top: "0px" }}>
+              <a href={resume} download style={{ top: "0px" }}>
                 <span>
                   Download Resume
                   <span>
@@ -401,7 +422,7 @@ function App() {
         <div
           className="Skills"
           id="skills"
-          onWheel={() => setTimeout(handleScroll, 1000)}
+          onWheel={() => setTimeout(handleScroll, 2000)}
           ref={skillRef}
         >
           <div className="skill_header">
@@ -415,24 +436,28 @@ function App() {
               onClick={activeScience}
             >
               Data Science
+              <div className={science ? "line" : ""} />
             </div>
             <div
               className={deep ? "deep_header emphasis_header" : "deep_header"}
               onClick={activeDeep}
             >
               Deep Learning
+              <div className={deep ? "line" : ""} />
             </div>
             <div
               className={data ? "data_header emphasis_header" : "data_header"}
               onClick={activeData}
             >
               Data
+              <div className={data ? "line" : ""} />
             </div>
             <div
               className={dev ? "dev_header emphasis_header" : "dev_header"}
               onClick={activeDev}
             >
               Dev
+              <div className={dev ? "line" : ""} />
             </div>
           </div>
           <div className="grid_table">
@@ -504,165 +529,172 @@ function App() {
           <div className="edu_content">
             <div className="content_row">
               <div className="edu_time">
-                <h3 className="left" style={{ fontWeight: "700" }}>
+                <h3
+                  className={smart ? "left" : "left notActive"}
+                  style={{ fontWeight: "700" }}
+                  onClick={activeSmart}
+                >
                   SMART WINGS
                 </h3>
-              </div>
-              <div className="edu border">
-                <div className="dot" />
-                <h3 className="right">Project Definition:</h3>
-
-                <h4 className="right">
-                  Wing design for long-range missiles which autonomously reduces
-                  drag force during travel
-                </h4>
-
-                <h3 className="right" style={{ marginTop: "20px" }}>
-                  Project Description:
-                </h3>
-
-                <h4 className="right">
-                  A mechatronics project that uses various sensors on a missile
-                  and makes realtime adjustments to the shape of the wing and
-                  the camber angle to reduce drag force for fuel efficiency and
-                  accuracy. The actuators are shape memory alloys which contract
-                  and release with heat, generated from the current which flows
-                  via PIC microcontrollers. These algorithms that are modeled
-                  are programmed into the PIC which controls the state of the
-                  current based on realtime data on the missile
-                </h4>
-                <h3 className="right" style={{ marginTop: "20px" }}>
-                  Contributions:
-                </h3>
-
-                <h4 className="right">
-                  Worked in the avionics department as a mechatronics engineer
-                  (research, part-time) at Roketsan. Mainly contributed to
-                  algorithm development and testing & integration of PIC logic
-                  into the experimental actuators
-                </h4>
-              </div>
-            </div>
-          </div>
-
-          <div className="edu_content">
-            <div className="content_row">
-              <div className="edu_time">
-                <h3 className="left" style={{ fontWeight: "700" }}>
+                <h3
+                  className={medical ? "left" : "left notActive"}
+                  style={{ fontWeight: "700" }}
+                  onClick={activeMedical}
+                >
                   Medical multimodaling with transfer learning
                 </h3>
-              </div>
-              <div className="edu border">
-                <div className="dot" />
-                <h3 className="right">Project Definition:</h3>
-
-                <h4 className="right">
-                  Creating a lung anomaly detector using limited data sources
-                  leveraging transfer learning
-                </h4>
-
-                <h3 className="right" style={{ marginTop: "20px" }}>
-                  Project Description:
-                </h3>
-
-                <h4 className="right">
-                  This master's thesis research was about leveraging transfer
-                  learning and seeing if we could make use of it at The Alfred
-                  Hospital (Melbourne, VIC). For this, we made use of imaging
-                  and NLP, using DenseNet trained on ChestX-ray14 and one 1-D
-                  CNN text submodel with a pre-trained GloVe embedding layer.
-                  Experimental results show that our multimodal improves the
-                  accuracy of the classification by 4% and 7% on average of 50
-                  epochs, compared to the individual text and image model,
-                  respectively.
-                </h4>
-                <h3 className="right" style={{ marginTop: "20px" }}>
-                  Contributions:
-                </h3>
-
-                <h4 className="right">
-                  For Short Paper (with co-authors from Nvidia and Monash) and
-                  sample notebooks:
-                </h4>
-                <h4 className="right">
-                  <a
-                    href="https://github.com/faikezra/medical-multimodal-with-transfer-learning"
-                    style={{ color: "black", textDecoration: "underline" }}
-                  >
-                    https://github.com/faikezra/medical-multimodal-with-transfer-learning
-                  </a>
-                </h4>
-              </div>
-            </div>
-          </div>
-
-          <div className="edu_content">
-            <div className="content_row">
-              <div className="edu_time">
-                <h3 className="left" style={{ fontWeight: "700" }}>
-                  GLORIA{" "}
+                <h3
+                  className={gloria ? "left" : "left notActive"}
+                  style={{ fontWeight: "700" }}
+                  onClick={activeGloria}
+                >
+                  GLORIA
                 </h3>
               </div>
               <div className="edu border">
                 <div className="dot" />
-                <h3 className="right">Project Definition:</h3>
+                <div className={smart ? "show" : "hidden"}>
+                  <h3 className="right">Project Definition:</h3>
 
-                <h4 className="right">
-                  An NLP Product that assists call agents.
-                </h4>
+                  <h4 className="right">
+                    Wing design for long-range missiles which autonomously
+                    reduces drag force during travel
+                  </h4>
 
-                <h3 className="right" style={{ marginTop: "20px" }}>
-                  Project Description:
-                </h3>
+                  <h3 className="right" style={{ marginTop: "20px" }}>
+                    Project Description:
+                  </h3>
 
-                <h4 className="right">
-                  The most established deep learning project inside of Telstra
-                  (Melbourne, Australia). It is ongoing research, and also is
-                  being used and tested by Telstra call agents. With the use of
-                  massive datasets from the chatlogs of millions of Telstra
-                  calls, it is not only a challenge to build and evaluate these
-                  models, but it also is a very intense data engineering and
-                  pipeline problem.
-                </h4>
-                <h3 className="right" style={{ marginTop: "20px" }}>
-                  Contributions:
-                </h3>
+                  <h4 className="right">
+                    A mechatronics project that uses various sensors on a
+                    missile and makes realtime adjustments to the shape of the
+                    wing and the camber angle to reduce drag force for fuel
+                    efficiency and accuracy. The actuators are shape memory
+                    alloys which contract and release with heat, generated from
+                    the current which flows via PIC microcontrollers. These
+                    algorithms that are modeled are programmed into the PIC
+                    which controls the state of the current based on realtime
+                    data on the missile
+                  </h4>
+                  <h3 className="right" style={{ marginTop: "20px" }}>
+                    Contributions:
+                  </h3>
 
-                <h4 className="right">
-                  - Integrated BERT into the Tensorflow/Hadoop ecosystem of
-                  Agent Assist for entailment the entailment detection to create
-                  negative datasets
-                </h4>
-                <h4 className="right">
-                  - Working with the skip-thought LSTM model to embed agent
-                  responses
-                </h4>
-                <h4 className="right">
-                  - Experimenting with the performance of Multi-task learning
-                  agents
-                </h4>
-                <h4 className="right">
-                  - Detecting canned responses within a large embedding space
-                </h4>
+                  <h4 className="right">
+                    Worked in the avionics department as a mechatronics engineer
+                    (research, part-time) at Roketsan. Mainly contributed to
+                    algorithm development and testing & integration of PIC logic
+                    into the experimental actuators
+                  </h4>
+                </div>
 
-                <h3 className="right" style={{ marginTop: "20px" }}>
-                  To see my other relevant short work about BERT:
-                </h3>
-                <h4 className="right">
-                  <a
-                    href="https://github.com/faikezra/article-classification-with-transfer-learning"
-                    style={{ color: "black", textDecoration: "underline" }}
-                  >
-                    https://github.com/faikezra/article-classification-with-transfer-learning
-                  </a>
-                </h4>
+                <div
+                  className={medical ? "show" : "hidden"}
+                  style={{ marginTop: "12px" }}
+                >
+                  <h3 className="right">Project Definition:</h3>
+
+                  <h4 className="right">
+                    Creating a lung anomaly detector using limited data sources
+                    leveraging transfer learning
+                  </h4>
+
+                  <h3 className="right" style={{ marginTop: "20px" }}>
+                    Project Description:
+                  </h3>
+
+                  <h4 className="right">
+                    This master's thesis research was about leveraging transfer
+                    learning and seeing if we could make use of it at The Alfred
+                    Hospital (Melbourne, VIC). For this, we made use of imaging
+                    and NLP, using DenseNet trained on ChestX-ray14 and one 1-D
+                    CNN text submodel with a pre-trained GloVe embedding layer.
+                    Experimental results show that our multimodal improves the
+                    accuracy of the classification by 4% and 7% on average of 50
+                    epochs, compared to the individual text and image model,
+                    respectively.
+                  </h4>
+                  <h3 className="right" style={{ marginTop: "20px" }}>
+                    Contributions:
+                  </h3>
+
+                  <h4 className="right">
+                    For Short Paper (with co-authors from Nvidia and Monash) and
+                    sample notebooks:
+                  </h4>
+                  <h4 className="right">
+                    <a
+                      href="https://github.com/faikezra/medical-multimodal-with-transfer-learning"
+                      style={{ color: "black", textDecoration: "underline" }}
+                    >
+                      https://github.com/faikezra/medical-multimodal-with-transfer-learning
+                    </a>
+                  </h4>
+                </div>
+
+                <div
+                  className={gloria ? "show" : "hidden"}
+                  style={{ marginTop: "12px" }}
+                >
+                  <h3 className="right">Project Definition:</h3>
+
+                  <h4 className="right">
+                    An NLP Product that assists call agents.
+                  </h4>
+
+                  <h3 className="right" style={{ marginTop: "20px" }}>
+                    Project Description:
+                  </h3>
+
+                  <h4 className="right">
+                    The most established deep learning project inside of Telstra
+                    (Melbourne, Australia). It is ongoing research, and also is
+                    being used and tested by Telstra call agents. With the use
+                    of massive datasets from the chatlogs of millions of Telstra
+                    calls, it is not only a challenge to build and evaluate
+                    these models, but it also is a very intense data engineering
+                    and pipeline problem.
+                  </h4>
+                  <h3 className="right" style={{ marginTop: "20px" }}>
+                    Contributions:
+                  </h3>
+
+                  <h4 className="right">
+                    - Integrated BERT into the Tensorflow/Hadoop ecosystem of
+                    Agent Assist for entailment the entailment detection to
+                    create negative datasets
+                  </h4>
+                  <h4 className="right">
+                    - Working with the skip-thought LSTM model to embed agent
+                    responses
+                  </h4>
+                  <h4 className="right">
+                    - Experimenting with the performance of Multi-task learning
+                    agents
+                  </h4>
+                  <h4 className="right">
+                    - Detecting canned responses within a large embedding space
+                  </h4>
+
+                  <h3 className="right" style={{ marginTop: "20px" }}>
+                    To see my other relevant short work about BERT:
+                  </h3>
+                  <h4 className="right">
+                    <a
+                      href="https://github.com/faikezra/article-classification-with-transfer-learning"
+                      style={{ color: "black", textDecoration: "underline" }}
+                    >
+                      https://github.com/faikezra/article-classification-with-transfer-learning
+                    </a>
+                  </h4>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <div className="Contact" id="contact">
-          <div className="hard_header">
+          <div className="hard_header emphasis">
             <h2>Contact</h2>
           </div>
           <div className="contact_content">
