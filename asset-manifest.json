@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/ez-test/static/css/main.66154bcb.chunk.css",
-    "main.js": "/ez-test/static/js/main.6451ac91.chunk.js",
-    "main.js.map": "/ez-test/static/js/main.6451ac91.chunk.js.map",
+    "main.css": "/ez-test/static/css/main.513cc35d.chunk.css",
+    "main.js": "/ez-test/static/js/main.494a3930.chunk.js",
+    "main.js.map": "/ez-test/static/js/main.494a3930.chunk.js.map",
     "runtime~main.js": "/ez-test/static/js/runtime~main.de885366.js",
     "runtime~main.js.map": "/ez-test/static/js/runtime~main.de885366.js.map",
-    "static/js/2.c328cbf2.chunk.js": "/ez-test/static/js/2.c328cbf2.chunk.js",
-    "static/js/2.c328cbf2.chunk.js.map": "/ez-test/static/js/2.c328cbf2.chunk.js.map",
+    "static/js/2.1c14bdce.chunk.js": "/ez-test/static/js/2.1c14bdce.chunk.js",
+    "static/js/2.1c14bdce.chunk.js.map": "/ez-test/static/js/2.1c14bdce.chunk.js.map",
     "index.html": "/ez-test/index.html",
-    "precache-manifest.71166ae5bdc74b19a1ee3873c291d81d.js": "/ez-test/precache-manifest.71166ae5bdc74b19a1ee3873c291d81d.js",
+    "precache-manifest.b5ac517bbea5428d929b52637661e576.js": "/ez-test/precache-manifest.b5ac517bbea5428d929b52637661e576.js",
     "service-worker.js": "/ez-test/service-worker.js",
-    "static/css/main.66154bcb.chunk.css.map": "/ez-test/static/css/main.66154bcb.chunk.css.map",
+    "static/css/main.513cc35d.chunk.css.map": "/ez-test/static/css/main.513cc35d.chunk.css.map",
     "static/media/Arrow.svg": "/ez-test/static/media/Arrow.50d012b7.svg",
     "static/media/Download.svg": "/ez-test/static/media/Download.924e146d.svg",
+    "static/media/Faik-Canberk-AYDIN.pdf": "/ez-test/static/media/Faik-Canberk-AYDIN.fd919af7.pdf",
     "static/media/Navigation.scss": "/ez-test/static/media/background.43cc66af.svg",
-    "static/media/github.svg": "/ez-test/static/media/github.61ebc208.svg",
-    "static/media/linkedin.svg": "/ez-test/static/media/linkedin.a4397776.svg",
-    "static/media/medium.svg": "/ez-test/static/media/medium.50c381de.svg"
+    "static/media/github-white.svg": "/ez-test/static/media/github-white.c76283d8.svg"
   }
 }
