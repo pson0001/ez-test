@@ -2,9 +2,12 @@
 ::-webkit-scrollbar {
   display: none;
 }
-html {
+html,
+body {
   scroll-behavior: smooth;
+
   overflow-x: hidden;
+  height: 100%;
 }
 body,
 h1 {
@@ -67,7 +70,7 @@ a {
   .button_div {
     margin: 7vh auto;
     .scroll_button {
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: rgba(255, 255, 255, 0.1);
       border: 1px;
       color: rgb(223, 223, 229);
       text-align: center;
@@ -537,4 +540,15 @@ h4.contact_detail {
         "tableau image";
     }
   }
+}
+
+.container {
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-type: y proximity;
+}
+
+.child {
+  scroll-snap-align: end;
+  position: relative;
 }
