@@ -775,7 +775,7 @@ function App() {
             </div>
           </div>
 
-          <div className="Contact child" id="contact">
+          <div className="Contact" id="contact">
             <div className="hard_header emphasis">
               <h2>Contact</h2>
             </div>
@@ -783,7 +783,7 @@ function App() {
               <div className="content_row">
                 <div className="contact_left">
                   <h3 className="contact_name">Faik Canberk Aydin</h3>
-                  <h4 className="contact_name">Data Science</h4>
+                  <h4 className="contact_name">Data Scientist</h4>
                 </div>
                 <div className="contact_right">
                   <h4 className="contact_detail">Email:</h4>

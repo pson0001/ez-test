@@ -514,6 +514,30 @@ h4.contact_detail {
 }
 
 @media (max-width: 700px) {
+  .Contact {
+    & .contact_content {
+      & .content_row {
+        flex-direction: column;
+        & .contact_left {
+          width: 90vw;
+          margin: 0 auto;
+        }
+        & .contact_right {
+          width: 90vw;
+          margin: 0 auto;
+
+          text-align: right;
+          & .contact_detail {
+            text-align: right;
+          }
+        }
+      }
+    }
+    .icons {
+      width: 10vw;
+      margin-left: 75%;
+    }
+  }
   .Education .hidden,
   .Experience .hidden {
     display: none;
