@@ -628,7 +628,11 @@ function App() {
                     <h4 className="right">
                       <a
                         href="https://github.com/faikezra/medical-multimodal-with-transfer-learning"
-                        style={{ color: "black", textDecoration: "underline" }}
+                        style={{
+                          color: "black",
+                          textDecoration: "underline",
+                          overflowWrap: "break-word"
+                        }}
                       >
                         https://github.com/faikezra/medical-multimodal-with-transfer-learning
                       </a>
@@ -686,7 +690,11 @@ function App() {
                     <h4 className="right">
                       <a
                         href="https://github.com/faikezra/article-classification-with-transfer-learning"
-                        style={{ color: "black", textDecoration: "underline" }}
+                        style={{
+                          color: "black",
+                          textDecoration: "underline",
+                          overflowWrap: "break-word"
+                        }}
                       >
                         https://github.com/faikezra/article-classification-with-transfer-learning
                       </a>
